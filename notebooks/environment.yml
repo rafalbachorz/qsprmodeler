@@ -1,0 +1,26 @@
+name: rorgammaqsar
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - notebook
+  - matplotlib
+  - pandas
+  - pyarrow
+  - scikit-learn
+  - rdkit=2022.03.3
+  - numpy
+  - pip
+  - pip:
+    - tensorflow
+    - networkx==2.1.0
+    - mordred
+    - psycopg2
+    - mlflow
+    - xgboost
+    - hyperopt
+    - boto3
+    - pydot
+    - graphviz
+    - dill
+    - seaborn

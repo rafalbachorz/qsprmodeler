@@ -1,0 +1,5 @@
+molregno,standard_value_get_mean,standard_units_get_levels,standard_type_get_levels,chembl_id_compound_get_levels,canonical_smiles_get_levels,act_0
+1725303,3.0,degrees C,T,CHEMBL3218918,Cc1cccc(C(=O)Nc2cc(-c3ccccc3)no2)c1,3.0
+1725304,3.0,degrees C,T,CHEMBL3218919,Cc1cc(C)c2nc(NC(=O)c3sccc3C)sc2c1,3.0
+1725305,3.0,degrees C,T,CHEMBL3218920,CCC(=O)Nc1ccc2nn(-c3ccc(CC)cc3)nc2c1,3.0
+1725309,7.3,degrees C,T,CHEMBL3218924,CC(C)CCC(O)[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@@]21C,7.3

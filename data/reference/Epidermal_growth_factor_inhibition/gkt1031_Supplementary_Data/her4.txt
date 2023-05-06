@@ -1,0 +1,63 @@
+./download/her4.txtEGFRINdb ID	ErbB4-IC50	PMID	Journal	Vol & Page	Smiles
+EGIN0000208	0.0023 µM 	18667312	Bioorg Med Chem Lett.	2008 November 15; 18(22): 5916–5919	c12c(ccc(c1)NC(=O)C=C)ncnc2Nc1cc(ccc1)Br
+EGIN0000006	0.014 µM  	18667312	Bioorg Med Chem Lett.	2008 November 15; 18(22): 5916–5919	c12c(cc(c(c1)NC(=O)C=C)OCCCN1CCOCC1)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0004795	0.02 µM	11378364	Bioorganic & Medicinal Chemistry Letters	11 (2001) 1401–1405	c1c(ncc2c1c(ncn2)Nc1ccc2n(ncc2c1)Cc1ccccc1)N(C)C
+EGIN0000001	0.0266 ± 0.0016 µM	21306821	Cancer Letters	302 (2011) 155–165	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0004275	<0.1 µM	19888761	J. Med. Chem	2009, 52, 6880–6888	c1(c(cc2c(c1)c(ncn2)Nc1c(c(ccc1)Cl)F)OCCOC)NC(=O)[C@@H]1CCCN1C(=O)C=C
+EGIN0004276	<0.1 µM	19888761	J. Med. Chem	2009, 52, 6880–6888	c1(c(cc2c(c1)c(ncn2)Nc1c(c(c(cc1)F)Cl)F)OCCOC)NC(=O)[C@@H]1CCCN1C(=O)C=C
+EGIN0000303	0.5 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(cnc(c1)NC(=O)C#CC)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000314	0.8 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCN(CC1)C)CCC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Br)F
+EGIN0004913	0.86 ± 0.3nM	21789172	PLoS One.	2011;6(7):e21487	c12cc(ccc1ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl)NC(=O)C=C
+EGIN0000001	1 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0000006	1 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	c12c(cc(c(c1)NC(=O)C=C)OCCCN1CCOCC1)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000310	1.0 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCOCC1)CCC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0000311	1.0 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCOCC1)CCC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Br)F
+EGIN0000313	1.2 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCN(CC1)C)CCC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0000293	1.7 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c1(cc(Nc2c3cc(NC(=O)C#C)ccc3ncn2)ccc1)Br
+EGIN0000312	1.8 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCCCC1)CCC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0000005	>10 µM	21306821	Cancer Letters	302 (2011) 155–165	COc1c(cc2c(c1)ncnc2Nc1cc(c(cc1)F)Cl)OCCCN1CCOCC1
+EGIN0004058	>100 nM   	16279804	J. Med. Chem	2005, 48, 7445-7456	c1(c(cc2c(c1)c(ncn2)NCc1ccc(cc1)F)OCC)OCC
+EGIN0004883	>10000 nM  	21454582	THE JOURNAL OF BIOLOGICAL CHEMISTRY	VOL. 286, NO. 21, pp. 18756–18765, May 27, 2011	c1(cc(ccc1)O[C@@H]1[C@@H](Cl)C=C(C=C1)Nc1ncnc2c1n(cc2)CCOCCO)C(F)(F)F
+EGIN0000003	>1000nM	22372864	J. Med. Chem.	2012, 55, 2846-2857	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000002	>1000nM  	21732342	Int. J. Cancer	130, 2445–2454 (2012) 	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0000003	>1000nM  	21732342	Int. J. Cancer	130, 2445–2454 (2012) 	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000297	11 nM    	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N(C(C)C)(C(C)C)CC#CC(=O)Nc1cc2c(cc1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0000294	12 nM    	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(ccc(c1)NC(=O)C#CC)ncnc2Nc1cc(ccc1)Br
+EGIN0000302	13 nM    	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(cnc(c1)NC(=O)C#C)ncnc2Nc1cc(ccc1)Br
+EGIN0001609	1349 nM   	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)cc(s2)C#Cc1ncc(nc1)N
+EGIN0003511	140 nM	19101143	Bioorganic & Medicinal Chemistry Letters	19 (2009) 1004–1008	c1cc(c(c(c1)F)NC(=O)c1cccc(c1)c1c(n2c(n1)cccc2)c1ccnc(n1)Nc1cc(c(cc1OC)N1CC[C@H](CC1)N1CCN(CC1)S(=O)(=O)C)CC)F
+EGIN0000300	16 nM    	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N(CC)(CC)CCC#CC(=O)Nc1cc2c(cc1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0001606	1718 nM   	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)cc(s2)C#C
+EGIN0000649	190 nM/L	17062696	Clin Cancer Res.	2006 Oct 15;12(20 Pt 1):6186-93.	n1cnn2c(c1Nc1ccc3c(c1)cnn3Cc1cccc(c1)F)c(c(c2)NC(=O)OC[C@H]1NCCOC1)C
+EGIN0000304	2.4 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(cnc(c1)NC(=O)C#CCCC)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000299	229 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCOCC1)CC#CC(=O)Nc1cc2c(cc1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0001608	2301 nM   	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)cc(s2)C#C[C@@H]1NCCC1
+EGIN0003512	>25000 nM	19101143	Bioorganic & Medicinal Chemistry Letters	19 (2009) 1004–1008	c1cc(c(c(c1)F)NC(=O)c1c(ccc(c1)c1c(n2c(n1)cccc2)c1ccnc(n1)Nc1cc(c(cc1OC)N1CC[C@H](CC1)N1CCN(CC1)S(=O)(=O)C)CC)OC)F
+EGIN0001605	254 nM    	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)sc(c2)C#Cc1ncc(nc1)N
+EGIN0000001	26.6nM   	21732342	Int J Cancer.	130, 2445–2454 (2012) 	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0004884	260 nM     	21454582	THE JOURNAL OF BIOLOGICAL CHEMISTRY	VOL. 286, NO. 21, pp. 18756–18765, May 27, 2011	c1(cc(ccc1)O[C@@H]1[C@@H](Cl)C=C(C=C1)Nc1ncnc2c1n(cc2)CCNC(=O)CC(F)(O)F)C(F)(F)F
+EGIN0000003	30 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000006	31 nM    	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(cc(c(c1)NC(=O)C=C)OCCCN1CCOCC1)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000296	310 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N(CC)(CC)CC#CC(=O)Nc1cc2c(cc1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0000005	323 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	COc1c(cc2c(c1)ncnc2Nc1cc(c(cc1)F)Cl)OCCCN1CCOCC1
+EGIN0000003	367 nM    	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000648	367+/-4.2 nM	12467226	Mol Cancer Ther.	2001 Dec;1(2):85-94.	c12c(ccc(c1)c1oc(cc1)NCCS(=O)(=O)C)ncnc2Nc1ccc(c(c1)Cl)OCc1cccc(c1)F
+EGIN0000006	388 ± 174 nM	15374980	Cancer Res.	2004 Sep 15;64(18):6652-9.	c12c(cc(c(c1)NC(=O)C=C)OCCCN1CCOCC1)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0004611	4 nM	22372864	J. Med. Chem.	2012, 55, 2846-2857	c1(c(c(ncn1)N)c1occ(CNC(=O)C=C)n1)Nc1ccc(c(c1)Cl)OCc1ccccn1
+EGIN0000301	4.3 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	C(N1CCOCC1)CC#CC(=O)Nc1cc2c(cc1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0001603	412 nM    	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)sc(c2)C#C[C@H](N)C
+EGIN0000010	49 ± 16 nM	16279804	J. Med. Chem	2005, 48, 7445-7456	c1(cc2c(cc1OC)ncnc2Nc1cccc(c1)Br)OC
+EGIN0000256	50 ± 19 nM	16279804	J. Med. Chem	2005, 48, 7445-7456	c12c(cc(c(c1)OCC)OCC)ncnc2Nc1cccc(c1)Br
+EGIN0004923	544 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	[C@@H]12[C@@H](N=CN=C1C=C(C(=C2)NC(=O)CCCN(C)C)O[C@H]1CCOC1)Nc1ccc(c(c1)Cl)F
+EGIN0000002	579 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0004051	59 ± 29 nM	16279804	J. Med. Chem	2005, 48, 7445-7456	c12c(ncnc1cc(c(c2)OCC)OCC)Nc1cc(I)ccc1
+EGIN0000309	6.2 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N1(CCOCC1)CC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0000298	624 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N(CCCC)(CCCC)CC#CC(=O)Nc1cc2c(cc1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0001607	638 nM    	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)cc(s2)C#C[C@H](N)C
+EGIN0000306	644 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N(CC)(CC)CC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0001602	66 nM     	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)sc(c2)C#C
+EGIN0001604	66 nM     	18287036	Proc Natl Acad Sci U S A. 	2008 Feb 26;105(8):2773-8	n1cnc2c(c1Nc1ccc(c(c1)Cl)OCc1cccc(c1)F)sc(c2)C#C[C@@H]1NCCC1
+EGIN0000305	7.1 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(cnc(c1)NC(=O)C#CCCCC)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000295	7.3 nM   	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	c12c(ccc(c1)NC(=O)C#CCO)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000308	73 nM    	16480284	J Med Chem	2006 Feb 23;49(4):1475-85.	N(CCCC)(CCCC)CC#CC(=O)Nc1cc2c(cn1)ncnc2Nc1ccc(c(c1)Cl)F
+EGIN0003510	74 nM	19101143	Bioorganic & Medicinal Chemistry Letters	19 (2009) 1004–1008	c1cc(c(c(c1)F)NC(=O)c1cccc(c1)c1c(n2c(n1)cccc2)c1ccnc(n1)Nc1ccc(cc1OC)N1CC[C@H](CC1)N1C

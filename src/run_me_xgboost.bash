@@ -1,0 +1,5 @@
+#!/bin/bash
+python activity_prediction_model_creation.py --training_conf median_100/xgboost_classification_Morgan_1024_pca_256_QED.json
+python activity_prediction_model_creation.py --training_conf median_100/xgboost_classification_Morgan_1024_pca_512_QED.json
+python activity_prediction_model_creation.py --training_conf median_100/xgboost_regression_Morgan_1024_pca_256_QED.json
+python activity_prediction_model_creation.py --training_conf median_100/xgboost_regression_Morgan_1024_pca_512_QED.json

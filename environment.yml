@@ -1,0 +1,26 @@
+name: qsarmodeler
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - configargparse
+  - h5py
+  - importlib_resources
+  - openbabel
+  - pip
+  - python=3.8 
+  - jupyter
+  - pandas=1.2.1
+  - rdkit
+  - scikit-learn
+  - matplotlib
+  - psycopg2 
+  - openpyxl
+  - pip:
+    - tensorflow
+    - tqdm
+    - mordred
+    - xgboost
+    - dill
+    - hyperopt

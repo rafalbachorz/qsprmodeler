@@ -1,0 +1,40 @@
+./download/t790m.txtEGFRINdb ID	IC50 (t790m)	PMID	Journal	Vol & Page	Smiles
+EGIN0000001	10 nM  	16475937	Curr Med Chem. 	2006;13(3):277-87.	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0000001	9.8 nM	21732342	Int J Cancer.	130, 2445–2454 (2012) 	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0000002	>1000 nM	21732342	Int. J. Cancer	130, 2445–2454 (2012) 	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0000002	260 nM	18316192	Bioorganic & Medicinal Chemistry	16 (2008) 3482–3488	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0000003	>1000 nM	21732342	Int. J. Cancer	130, 2445–2454 (2012) 	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000003	>1000 nM	22372864	J. Med. Chem.	2012, 55, 2846-2857	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000003	>4000 nM 	16475937	Curr Med Chem. 	2006;13(3):277-87.	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000005	1013 nM 	16475937	Curr Med Chem. 	2006;13(3):277-87.	COc1c(cc2c(c1)ncnc2Nc1cc(c(cc1)F)Cl)OCCCN1CCOCC1
+EGIN0000006	26 nM  	16475937	Curr Med Chem. 	2006;13(3):277-87.	c12c(cc(c(c1)NC(=O)C=C)OCCCN1CCOCC1)ncnc2Nc1cc(c(cc1)F)Cl
+EGIN0000208	1.2 nM	18316192	Bioorganic & Medicinal Chemistry	16 (2008) 3482–3488	c12c(ccc(c1)NC(=O)C=C)ncnc2Nc1cc(ccc1)Br
+EGIN0000646	360 nM	18316192	Bioorganic & Medicinal Chemistry	16 (2008) 3482–3488	c1(ccc2c(c1)c(ncn2)Nc1cc(ccc1)Br)NC(=O)CC
+EGIN0001052	3.0 nM	18316192	Bioorganic & Medicinal Chemistry	16 (2008) 3482–3488	c12c(ccc(c1)NC(=O)/C=C/CN(C)C)ncnc2Nc1cccc(c1)Br
+EGIN0002479	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	c1(c2c(ncn1)sc1c2CCCC1)NCc1ccccc1
+EGIN0004360	3.77 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1c(cc(c(c1)Nc1nc(c(cn1)Cl)Oc1cccc(c1)NC(=O)C=C)OC)N1CCN(CC1)C
+EGIN0004542	>1000 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	COc1c(Nc2ncc3CN(C(=O)N(c4cccc(NC(=O)C=C)c4)c3n2)c2ccc(OCc3ccccc3)cc2)ccc(c1)N1CCN(C)CC1
+EGIN0004543	>1000 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	COc1c(Nc2nc3c(CN(C)C(=O)N3c3cc(N)ccc3)cn2)ccc(c1)N1CCN(C)CC1
+EGIN0004544	2.43 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccc(cc1)OCc1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004545	2.03 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccc(cc1)Oc1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004546	5.24 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccc(cc1)c1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004548	0.67 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)Cc1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004550	1.34 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1cc2c(cc1)cccc2)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004551	0.51 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004552	10.5 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C1CC1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004553	6.02 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)CCC)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004554	>1000 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)F)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004555	9.37 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)C)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004556	39.9 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OCCC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004557	12.7 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OCC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004558	1.67 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(cc1OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004559	1.66 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(cc1)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004560	>1000 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	CNc1ncc2CN(C)C(=O)N(c3cccc(NC(=O)C=C)c3)c2n1
+EGIN0004561	45.7 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1ccc(cc1)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C
+EGIN0004562	9.52 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CC[C@H](CC1)N(C)C
+EGIN0004564	11 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CCC1)C
+EGIN0004566	60.31 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCOCC1
+EGIN0004569	95.71 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCCCC1
+EGIN0004573	24.90 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N(C)C
+EGIN0004577	6.56 nM	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004611	3.2 nM	22372864	J. Med. Chem.	2012, 55, 2846-2857	c1(c(c(ncn1)N)c1occ(CNC(=O)C=C)n1)Nc1ccc(c(c1)Cl)OCc1ccccn1

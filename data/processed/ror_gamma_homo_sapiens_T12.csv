@@ -1,0 +1,6 @@
+molregno,standard_value_get_mean,standard_units_get_levels,standard_type_get_levels,chembl_id_compound_get_levels,canonical_smiles_get_levels,act_0
+2318354,6.0,hr,T1/2,CHEMBL4278903,CC(C)C(=O)N1CCC(c2cn(C)c3ncc(NC(=O)c4cccc(C#N)c4)c(C(F)(F)F)c23)CC1,6.0
+2322296,0.8333,hr,T1/2,CHEMBL4282848,Cn1cc(C2CCN(C(=O)C3CCCC3)CC2)c2cc(NC(=O)c3cccc(C#N)c3)cnc21,0.8333
+2327824,10.52,hr,T1/2,CHEMBL4288376,Cc1c(NC(=O)c2cccc(C#N)c2)cnc2c1c(C1CCN(C(=O)C3CCCC3)CC1)cn2C,10.52
+2330176,21.82,hr,T1/2,CHEMBL4290728,Cc1c(NC(=O)c2cccc(C#N)c2)ccc2c1c(C1CCN(C(=O)C3CCCC3)CC1)cn2C,21.82
+2331175,1.767,hr,T1/2,CHEMBL4291727,Cn1cc(C2CCN(C(=O)C3CCCC3)CC2)c2cc(NC(=O)c3cccc(C#N)c3)ccc21,1.767

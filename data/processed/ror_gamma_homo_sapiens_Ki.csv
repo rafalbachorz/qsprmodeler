@@ -1,0 +1,17 @@
+molregno,standard_value_get_mean,standard_units_get_levels,standard_type_get_levels,chembl_id_compound_get_levels,canonical_smiles_get_levels,act_0
+92776,51.0,nM,Ki,CHEMBL62136,O=S(=O)(c1ccccc1)N(CC(F)(F)F)c1ccc(C(O)(C(F)(F)F)C(F)(F)F)cc1,51.0
+285127,10.0,nM,Ki,CHEMBL171804,CC(C)[C@@H](O)CC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@@]21C,10.0
+501186,10.0,nM,Ki,CHEMBL497834,CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@H]3[C@H](CC[C@@]21C)[C@@]1(C)CC[C@H](O)CC1=C[C@@H]3O,10.0
+501330,10.0,nM,Ki,CHEMBL497207,CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3[C@H](O)C=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@@]21C,10.0
+1409150,105.0,nM,Ki,CHEMBL2137199,OC(c1ccc(-c2ccc(CN3CCN(Cc4ccncc4)CC3)cc2)c(F)c1)(C(F)(F)F)C(F)(F)F,105.0
+1608778,111.0,nM,Ki,CHEMBL3094388,CC(=O)Nc1nc(C)c(S(=O)(=O)Nc2ccc(C(O)(C(F)(F)F)C(F)(F)F)cc2)s1,111.0
+1613765,31.62,nM,Ki,CHEMBL3105671,CCS(=O)(=O)c1ccc(CC(=O)Nc2cc(-c3cccc(Cl)c3)c(C(=O)c3cccc(F)c3)s2)cc1,31.62
+1613775,39.81,nM,Ki,CHEMBL3105681,CCS(=O)(=O)c1ccc(CC(=O)Nc2nc(-c3cccc(Cl)c3)c(C(=O)c3ccccc3Cl)s2)cc1,39.81
+1613786,25.12,nM,Ki,CHEMBL3105692,CCS(=O)(=O)c1ccc(CC(=O)Nc2cc(-c3cccc(Cl)c3)c(C(=O)c3ccccc3Cl)s2)cc1,25.12
+1613911,398.11,nM,Ki,CHEMBL3105815,CCS(=O)(=O)c1ccc(CC(=O)Nc2nc(-c3cc(Cl)ccc3Cl)cs2)cc1,398.11
+1725302,1000.0,nM,Ki,CHEMBL3218917,CC(=O)N1CCN(Cc2ccc(-c3ccc(C(O)(C(F)(F)F)C(F)(F)F)cc3)cc2)CC1,1000.0
+2320558,20.0,nM,Ki,CHEMBL4281109,Cn1cc(C2CCN(C(=O)C3CCCCC3)CC2)c2cc(NC(=O)c3cc(C#N)ccn3)ccc21,20.0
+2323319,1200.0,nM,Ki,CHEMBL4283871,N#Cc1cccc(C(=O)Nc2ccc3[nH]cc(C4CCN(C(=O)C5CCCC5)CC4)c3c2)c1,1200.0
+2327163,20.0,nM,Ki,CHEMBL4287715,Cn1cc(C2CCN(C(=O)C3CCCC3)CC2)c2cc(NC(=O)c3cc(C#N)ccn3)ccc21,20.0
+2328752,19000.0,nM,Ki,CHEMBL4289304,CCn1cc(C2CCN(C(=O)C3CCCC3)CC2)c2cc(NC(=O)c3cc(C#N)ccn3)ccc21,19000.0
+2331175,50.0,nM,Ki,CHEMBL4291727,Cn1cc(C2CCN(C(=O)C3CCCC3)CC2)c2cc(NC(=O)c3cccc(C#N)c3)ccc21,50.0

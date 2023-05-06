@@ -1,0 +1,60 @@
+{
+    "feature_transform":
+    {
+        "Calculate_molecular_features":
+        {
+            "proceed": "yes",
+            "calculate_fps": "yes",
+            "calculate_descriptors": "yes",
+            "fingerprint_size": 1024,
+            "fp_type": "morgan",
+            "descriptors_types": ["QED", "Lipinski"],
+            "meta_descriptors_types": ["QED"],
+            "label": "Molecular features"
+        },
+        "FP_calculation": 
+        {
+            "proceed": "no",
+            "fingerprint_size": 1024,
+            "fp_type": "morgan",
+            "label": "FP creation",
+            "first_step": "yes"
+        },
+        "D_calculation":
+        {
+            "proceed": "no",
+            "label": "D creation",
+            "first_step": "no"
+        },
+
+        "Scaling":
+        {
+            "proceed": "no",
+            "label": "Scaling"
+        },
+        "PCA":
+        {
+            "proceed": "no",
+            "label": "PCA"
+        }
+    },
+    "target_transform":
+    {
+        "Target_transform":
+        {
+            "proceed": "yes"
+        },
+        "Target_binarization":
+        {
+            "proceed": "no",
+            "threshold": 1000,
+            "label": "Target Binarization"
+        },
+        "O_removal":
+        {
+            "proceed": "no",
+            "factor": 1.5,
+            "label": "Outlier removal"
+        }
+    }
+}

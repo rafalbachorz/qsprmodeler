@@ -1,0 +1,93 @@
+./download/DM.txtEGFRINdb ID	IC50(l858r/t790M)	PMID	Journal	Vol & Page	Smiles
+EGIN0000807	0.003±0.002 µM  	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1(c(cc2c(c1)c(c(cn2)C#N)Nc1cc(c(cc1)OCc1ccccn1)Cl)OCC)NC(=O)/C=C/CN(C)C
+EGIN0002490	0.1 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)C=C
+EGIN0002498	0.305 µM 	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(C)C
+EGIN0002503	0.596 µM 	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@H](C)c2ccccc2)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(C)C
+EGIN0002495	0.739 µM 	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)C)c2c1sc1c2CCN(C1)C(=O)C=C
+EGIN0004548	0.93 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)Cc1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0002499	0.93 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(CC)CC
+EGIN0004551	0.98 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0000208	<1 nM     	20222733	J. Med. Chem	2010, 53, 2892–2901	c12c(ccc(c1)NC(=O)C=C)ncnc2Nc1cc(ccc1)Br
+EGIN0004559	1.19 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(cc1)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0002500	1.399 µM 	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)/C=C/CN1CCOCC1
+EGIN0004584	1.5 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	n1c(nc(nc1Nc1ccc(cc1)Cl)NCCN1CCOCC1)OC
+EGIN0004360	1.88 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1c(cc(c(c1)Nc1nc(c(cn1)Cl)Oc1cccc(c1)NC(=O)C=C)OC)N1CCN(CC1)C
+EGIN0002484	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	c1(c2c(ncn1)sc1c2CCCC1)N[C@H](CO)c1ccccc1
+EGIN0002489	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCNC1
+EGIN0002491	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)CC
+EGIN0002492	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)C#CC
+EGIN0002494	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](CO)c2ccccc2)c2c1sc1c2CCN(C1)C(=O)C=C
+EGIN0002497	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)/C=C/c1ccccc1
+EGIN0002501	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)/C=C/CN1CCN(CC1)C
+EGIN0002502	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(C)C
+EGIN0002506	>10 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(NCCO)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(C)C
+EGIN0004571	>100.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1nc(nc(c1)Nc1ccccc1OC)Nc1c(cccc1)OC
+EGIN0004759	>100.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1c(ccc(c1)NCc1n(c(nn1)SCC(=O)Nc1ccc(cc1)C(=O)OCC)c1ccccc1)OC
+EGIN0004769	>100.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c12ccccc1c1c(CC2)c(c2c(n1)nc1n(c2=O)c(n[nH]1)S)c1ccccc1
+EGIN0004778	>100.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1c(ccc(c1)n1c(=O)c2c(c(sc2nc1SCC(=O)Nc1ccccc1Cl)C)C)C
+EGIN0000646	1000 ± 1300 nM	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(ccc2c(c1)c(ncn2)Nc1cc(ccc1)Br)NC(=O)CC
+EGIN0000002	1000 ± 360 nM 	20222733	J. Med. Chem	2010, 53, 2892–2901	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0000002	>1000 nM	19888761	J. Med. Chem	2009, 52, 6880–6888	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0000002	>1000 nM	21732342	Int. J. Cancer	130, 2445–2454 (2012) 	c12cc(c(cc1ncnc2Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0000003	>1000 nM	19888761	J. Med. Chem	2009, 52, 6880–6888	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0000003	>1000 nM	21732342	Int. J. Cancer	130, 2445–2454 (2012) 	CS(=O)(=O)CCNCc1ccc(o1)c1cc2c(cc1)ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl
+EGIN0004542	>1000 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	COc1c(Nc2ncc3CN(C(=O)N(c4cccc(NC(=O)C=C)c4)c3n2)c2ccc(OCc3ccccc3)cc2)ccc(c1)N1CCN(C)CC1
+EGIN0004543	>1000 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	COc1c(Nc2nc3c(CN(C)C(=O)N3c3cc(N)ccc3)cn2)ccc(c1)N1CCN(C)CC1
+EGIN0004554	>1000 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)F)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004560	>1000 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	CNc1ncc2CN(C)C(=O)N(c3cccc(NC(=O)C=C)c3)c2n1
+EGIN0002435	>10000 nM	20550212	Journal of Medicinal Chemistry	2010, 53, 4980–4988	n1cnc(c2c1oc(c2c1ccccc1)c1ccccc1)N[C@@H](c1ccccc1)CO
+EGIN0002436	>10000 nM	20550212	Journal of Medicinal Chemistry	2010, 53, 4980–4988	n1cnc(c2c1oc(c2c1ccc(cc1)NC(=O)C=C)c1ccccc1)N[C@@H](c1ccccc1)CO
+EGIN0004276	11 nM	19888761	J. Med. Chem	2009, 52, 6880–6888	c1(c(cc2c(c1)c(ncn2)Nc1c(c(c(cc1)F)Cl)F)OCCOC)NC(=O)[C@@H]1CCCN1C(=O)C=C
+EGIN0004573	11.50 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N(C)C
+EGIN0004913	-12 ± 2 nM	21789172	PLoS One.	2011;6(7):e21487	c12cc(ccc1ncnc2Nc1cc(c(cc1)OCc1cc(ccc1)F)Cl)NC(=O)C=C
+EGIN0004589	13.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	n1c(nc(nc1c1ccc(cc1)Cl)SC(=O)Nc1ccc(cc1)Cl)O
+EGIN0004339	130 ± 16 nM  	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(ccc2c(c1)c(ccn2)Nc1cc(ccc1)Br)NC(=O)CCCN(C)C
+EGIN0001528	140 ± 24 nM  	20222733	J. Med. Chem	2010, 53, 2892–2901	c12c(cc(c(c1)OC)OC)ncnc2Nc1cccc(c1)C#C
+EGIN0000001	15 nM	20550212	Journal of Medicinal Chemistry	2010, 53, 4980–4988	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0004341	1500 ± 150 nM 	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(c(cc2c(c1)c(ccn2)Nc1cc(ccc1)C#C)OCCOC)OCCOC
+EGIN0004343	1500 ± 670 nM	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(c(cc2c(c1)c(ccn2)Nc1cc(ccc1)C#C)OC)OC
+EGIN0004860	17.6 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1(ccc(c2c1C(=O)c1c(C2=O)cccc1OC)O)O
+EGIN0004340	190 ± 69 nM  	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(ccc2c(c1)c(ncn2)Nc1cc(ccc1)Br)NC(=O)CCCN(C)C
+EGIN0004558	2.04 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(cc1OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0002496	2.2 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CC)c2c1sc1c2CCN(C1)C(=O)C=C
+EGIN0004550	2.44 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1cc2c(cc1)cccc2)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0002493	2.48 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@@H](c2ccccc2)CO)c2c1sc1c2CCN(C1)S(=O)(=O)C=C
+EGIN0000005	2.815 µM 	20961149	J. Med. Chem.	2010, 53, 7316–7326	COc1c(cc2c(c1)ncnc2Nc1cc(c(cc1)F)Cl)OCCCN1CCOCC1
+EGIN0004582	20.9 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	n1c(nc(nc1Nc1ccc(cc1)OC)NCc1occc1)Cl
+EGIN0004851	22.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1cccc2c1n1c(n2C)n[nH]c1=S
+EGIN0004842	23.5 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1c(ccc(c1)S(=O)(=O)Nc1nc2c(nc1Nc1ccc(cc1)C(=O)O)cccc2)NC(=O)C
+EGIN0004275	24 nM	19888761	J. Med. Chem	2009, 52, 6880–6888	c1(c(cc2c(c1)c(ncn2)Nc1c(c(ccc1)Cl)F)OCCOC)NC(=O)[C@@H]1CCCN1C(=O)C=C
+EGIN0000001	24.0 nM	21732342	Int J Cancer.	130, 2445–2454 (2012) 	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H]1CCOC1
+EGIN0004832	24.7 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1ccccc1Cc1sc(c(c1C)C(=O)N)NCC(=O)COc1cc2c(cc1)cccc2
+EGIN0002437	28 nM	20550212	Journal of Medicinal Chemistry	2010, 53, 4980–4988	n1cnc(c2c1oc(c2c1cccc(c1)NC(=O)C=C)c1ccccc1)N[C@@H](c1ccccc1)CO
+EGIN0004561	28.3 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1ccc(cc1)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C
+EGIN0004566	28.85 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCOCC1
+EGIN0000005	2815 nM	20550212	Journal of Medicinal Chemistry	2010, 53, 4980–4988	COc1c(cc2c(c1)ncnc2Nc1cc(c(cc1)F)Cl)OCCCN1CCOCC1
+EGIN0004577	3.14 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004335	3.2 ± 1.6 nM 	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(ccc2c(c1)c(ccn2)Nc1cc(ccc1)Br)NC(=O)C=C
+EGIN0004545	3.57 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccc(cc1)Oc1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004580	30.7 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	n1c(nc(nc1Nc1ccccc1)N/N=C/c1ccc(cc1)O)NC
+EGIN0004586	31.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	n1c(nc(nc1Nc1ccccc1)N/N=C/c1ccc(cc1)OC)NC
+EGIN0004575	36.1 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1nc(nc(c1)Nc1cccc(c1)OC)Nc1cc(ccc1)OC
+EGIN0004556	36.3 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OCCC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004569	36.43 nM   	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCCCC1
+EGIN0002505	4.107 µM 	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@H](CO)Cc2ccccc2)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(C)C
+EGIN0004555	4.18 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)C)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004553	4.42 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)CCC)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004546	4.64 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccc(cc1)c1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004822	40.9 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1cccc(c1)NC(=O)NNC(=O)c1sc(cn1)Cc1cscc1
+EGIN0004564	5.17 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CCC1)C
+EGIN0004562	5.20 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CC[C@H](CC1)N(C)C
+EGIN0002504	5.75 µM	20961149	J. Med. Chem.	2010, 53, 7316–7326	n1cnc(N[C@H](CC)c2ccccc2)c2c1sc1c2CCN(C1)C(=O)/C=C/CN(C)C
+EGIN0004337	520 ± 280 nM 	20222733	J. Med. Chem	2010, 53, 2892–2901	c1(ccc2c(c1)c(ccn2)Nc1cc(ccc1)Br)NC(=O)CC
+EGIN0004814	56.8 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1cc(cc(c1)NC(=O)c1c(c2c([nH]c1=O)cccc2)O)Br
+EGIN0004923	57 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	[C@@H]12[C@@H](N=CN=C1C=C(C(=C2)NC(=O)CCCN(C)C)O[C@H]1CCOC1)Nc1ccc(c(c1)Cl)F
+EGIN0004552	6.02 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)C1CC1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004544	6.31 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OC)Nc1ncc2c(n1)N(C(=O)N(C2)c1ccc(cc1)OCc1ccccc1)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004592	6.5 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	n1c(nc(nc1Nc1ccc(cc1)F)N/N=C/c1c(c(c(c(c1)Br)O)Br)O)N(C)C
+EGIN0004798	65.1 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	o1c(=O)cc(c2c1c1c(n(c2=O)C)cc(cc1)OC)O
+EGIN0004806	65.6 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1cc(ccc1C(=O)NNc1ccc(cc1C)Cl)CC
+EGIN0004788	66.0 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1(n(c(=S)sc1C(=O)N/N=C/c1sccc1)CC=C)N
+EGIN0004557	7.10 nM    	22339342	J. Med. Chem. 	2012, 55, 2711-2723	c1(ccc(c(c1)OCC)Nc1ncc2c(n1)N(C(=O)N(C2)C)c1cccc(c1)NC(=O)C=C)N1CCN(CC1)C
+EGIN0004867	8.9 µM	22227214	Bioorganic & Medicinal Chemistry Letters	22 (2012) 1365–1370	c1ccccc1N1C(=O)[C@H](CN1C)NC(=O)/C=N/O
+EGIN0000001	9 nM	22888144	J Pharmacol Exp Ther	 2012 Aug 10. 	CN(C)C/C=C/C(=O)Nc1c(cc2c(c1)c(ncn2)Nc1cc(c(cc1)F)Cl)O[C@H
