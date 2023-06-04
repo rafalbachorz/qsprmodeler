@@ -709,9 +709,9 @@ def read_in_pipeline(pipeline_file, pipeline_directory=ROOT_DIR/"pipelines"):
         pipeline = json.load(f)
     return pipeline
 
-class ColumnNames(Enum):
-    SMILES_COLUMN = "canonical_smiles_get_levels"
-    TARGET_COLUMN = "IC50_nM"
+# class ColumnNames(Enum):
+#     SMILES_COLUMN = "canonical_smiles_get_levels"
+#     TARGET_COLUMN = "experimental_value"
 
 def data_load(configuration: dict) -> pd.DataFrame:
     """_summary_
@@ -727,14 +727,16 @@ def data_load(configuration: dict) -> pd.DataFrame:
     """
     file_name = configuration["data_file"]
     train_data = pd.read_csv((co.DATA_DIR/file_name).absolute().as_posix())
-    try:
-        activity_columns = ["act_"+str(iii) for iii in range(configuration["max_level_activity"])]
-    except:
-        activity_columns = configuration['measurement_prefix']+'0'
+
+    molecule_column = configuration["molecule_column"]
+    experimental_data_prefix = configuration["experimental_data_prefix"]
+
+    activity_columns = [experimental_data_prefix+"_"+str(iii) for iii in range(configuration["max_level_activity"])]
+
     try:
         train_data["target_std"] = train_data[activity_columns].apply(lambda x: np.std(x), axis=1)
     except:
-        pass
+        raise ValueError
     
     # here we exclude the molecules for which the std of the available measurements is significant 
     target_std_threshold = configuration["std_threshold"]
@@ -742,20 +744,21 @@ def data_load(configuration: dict) -> pd.DataFrame:
         train_data = train_data[train_data["target_std"] < target_std_threshold]
     except:
         pass  
-
+    
+    target_column = configuration["target_column"]
     try:
         strategy = configuration["strategy"]
         if strategy == "min":
-            train_data[ColumnNames.TARGET_COLUMN.value] = train_data[activity_columns].apply(lambda x: np.min(x), axis=1)
+            train_data[target_column] = train_data[activity_columns].apply(lambda x: np.min(x), axis=1)
         elif strategy == "max":
-            train_data[ColumnNames.TARGET_COLUMN.value] = train_data[activity_columns].apply(lambda x: np.max(x), axis=1)
+            train_data[target_column] = train_data[activity_columns].apply(lambda x: np.max(x), axis=1)
         elif strategy == "median":
-            train_data[ColumnNames.TARGET_COLUMN.value] = train_data[activity_columns].apply(lambda x: np.median(x[~np.isnan(x)]), axis=1)
+            train_data[target_column] = train_data[activity_columns].apply(lambda x: np.median(x[~np.isnan(x)]), axis=1)
         elif strategy == "mean":
-            train_data[ColumnNames.TARGET_COLUMN.value] = train_data[activity_columns].apply(lambda x: np.mean(x), axis=1)
+            train_data[target_column] = train_data[activity_columns].apply(lambda x: np.mean(x), axis=1)
         else:
             raise NotImplementedError
     except:
         pass
     
-    return train_data.loc[:, [ColumnNames.SMILES_COLUMN.value, ColumnNames.TARGET_COLUMN.value]]
+    return train_data.loc[:, [molecule_column, target_column]]

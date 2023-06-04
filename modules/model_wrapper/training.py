@@ -12,11 +12,11 @@ from auxiliary import loggers
 l = loggers.get_logger(logger_name="logger")
 
 from enum import Enum
-class ColumnNames(Enum):
-    SMILES_COLUMN = "canonical_smiles_get_levels"
-    TARGET_COLUMN = "IC50_nM"
+# class ColumnNames(Enum):
+#     SMILES_COLUMN = "canonical_smiles_get_levels"
+#     TARGET_COLUMN = "IC50_nM"
 
-def train(train_data: pd.DataFrame, configuration_train: dict, configuration_storage: dict, prediction_methodology: str, 
+def train(train_data: pd.DataFrame, configuration_train: dict, configuration_data:dict, configuration_storage: dict, prediction_methodology: str, 
           prediction_type: str, GPU_support: bool):
     """_summary_
 
@@ -28,9 +28,10 @@ def train(train_data: pd.DataFrame, configuration_train: dict, configuration_sto
     Returns:
         _type_: _description_
     """
-    
-    smiles_codes = train_data[ColumnNames.SMILES_COLUMN.value].copy()
-    target = train_data[ColumnNames.TARGET_COLUMN.value].copy()
+    smiles_column = configuration_data["molecule_column"]
+    target_column = configuration_data["target_column"]
+    smiles_codes = train_data[smiles_column].copy()
+    target = train_data[target_column].copy()
 
     non_idx = dt.validate_smiles(smiles_codes=smiles_codes)
     smiles_codes = smiles_codes.drop(non_idx, axis=0)

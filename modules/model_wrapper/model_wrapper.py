@@ -616,7 +616,7 @@ class M_XGBoost(Model):
             current_hyperparameters = self._hyperparameters
         
         if (self._validate):
-            X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.10, random_state=42)
+            X_train, X_val, y_train, y_val = train_test_split(X, y.astype(int), test_size=0.10, random_state=42)
             eval_set = [(X_val, y_val)]
         else:
             X_train, y_train = X, y

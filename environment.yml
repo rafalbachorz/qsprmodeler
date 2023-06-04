@@ -24,3 +24,4 @@ dependencies:
     - xgboost
     - dill
     - hyperopt
+    - seaborn

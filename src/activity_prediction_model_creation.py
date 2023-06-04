@@ -42,6 +42,7 @@ if __name__=="__main__":
         
     train_data = dt.data_load(training_params["data_preparation"])
     best_hyperparams, measure = train(train_data=train_data, configuration_train=training_params["training_aux_data"],
+                                      configuration_data=training_params["data_preparation"],
                                       configuration_storage=training_params["model_storage"],
                                       prediction_methodology=training_params["prediction_methodology"],
                                       prediction_type=training_params["prediction_type"],
