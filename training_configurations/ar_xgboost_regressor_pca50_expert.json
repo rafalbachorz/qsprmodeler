@@ -1,0 +1,32 @@
+{
+    "prediction_methodology": "M_XGBoost",
+    "prediction_type": "regression",
+    "GPU_support": false,
+    "training_aux_data": 
+    {
+        "run_name": "test", 
+        "n_outer": 1, 
+        "n_cv": 5, 
+        "development": false, 
+        "goal_function": "mse", 
+        "goal_function_multiplier": 1.0, 
+        "threshold": null,
+        "track_model": false, 
+        "experiment": null, 
+        "comment": null, 
+        "max_evals": 100,
+        "pipeline_file": "ar/pipeline_configuration_xgboost_regression_Morgan_1024_pca_50_QED.json"
+    },
+    "data_preparation": {
+        "data_file": "ar_homo_sapiens_chembl_3.3_more_ChEMBL_columnsIC50EC50_combined_expert.csv",
+        "molecule_column": "coms_canonical_smiles",
+        "experimental_data_prefix": "act_median_expert",
+        "target_column": "experimental_value",
+        "max_level_activity": 1,
+        "std_threshold": 100,
+        "strategy": "median"
+    },
+    "model_storage": {
+        "resulting_model": "ar_xgboost_regressor_pca50_expert.model"
+    }
+}

@@ -1,1 +1,2 @@
-from .analyzers import analyze_classifier, analyze_regressor, get_model_predictions
+from .analyzers import analyze_classifier, analyze_regressor, get_model_predictions, get_predictions_regressor, \
+get_predictions_classifier, get_model_ext_predictions

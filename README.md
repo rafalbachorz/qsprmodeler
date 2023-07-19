@@ -17,7 +17,6 @@ The library can be useful for the examination of various machine learning method
 
 ![](res/methodology_type.png)
 
-
 3. Copy and paste the path to the pipeline file (which is present in the ```pipelines``` folder), depending on what features have to be used (inside this file, the threshold for the classification can be defined).
 
 ![](res/pipeline_1.png)
@@ -36,3 +35,6 @@ The library can be useful for the examination of various machine learning method
 6. Now run the command (inside the ```src``` folder) ```python activity_prediction_model_creation.py --training_conf <training configuration file.json>```, optionally, ```nohup``` can be added before ```python```. The training will start, and all the parameters that were previously set will be applied during the code execution.
 
 7. The best model can be loaded, and predictions can be made.
+
+# How to analyze the result
+To show how the trained model can be used in the inference mode we delver a set of Jupyter notebooks (directory: ```notebooks```).

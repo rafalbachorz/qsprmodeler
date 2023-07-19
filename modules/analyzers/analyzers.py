@@ -63,6 +63,54 @@ def create_model_label(training_params: dict) -> str:
     label += training_params["data_preparation"]["strategy"]+"_"+str(training_params["data_preparation"]["std_threshold"])
     return label
 
+def get_predictions_classifier(training_configuration_file):
+    
+    with open(training_configuration_file.as_posix(), "r") as f:
+        training_params = json.load(f)
+
+    prediction_methodology = training_params["prediction_methodology"]
+    prediction_type=training_params["prediction_type"]
+
+    if prediction_methodology == mw.Prediction_Methodology.MLP:
+        m_c = mw.M_MLP(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.XGBOOST:
+        m_c = mw.M_XGBoost(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RF:
+        m_c = mw.M_RandomForest(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.SVM:
+        m_c = mw.M_SVM(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RIDGE:
+        m_c = mw.M_Ridge(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.BAGGING:
+        m_c = mw.M_Bagging(prediction_type=prediction_type, pipeline_configuration=None)
+    else:
+        raise NotImplementedError
+
+    model_label = prediction_methodology + "_" + create_model_label(training_params)
+
+    model_file = (co.MODEL_DIR/training_params["model_storage"]["resulting_model"]).as_posix()
+    m_c.Load(model_file)
+    l.info("Optimal hyperparameters:, %s", str(m_c.Hyperparameters))
+
+    l.info("Performance on external (hold-out) set")
+    smiles_codes_val = m_c.Data["smiles_codes_val"]
+    smiles_codes_train = m_c.Data["smiles_codes_train"]
+    m_c.Pipeline.fit(X=smiles_codes_train, y=None)
+    X_val = create_molecular_features(pipeline=m_c.Pipeline, smiles_codes=smiles_codes_val)
+    X_val = process_molecular_features(pipeline=m_c.Pipeline, X=X_val)
+    y_train_val_pred = m_c.Predict(X_val)
+    y_train_val = m_c.Data["targets_val"]
+    
+    l.info("Performance on training set")
+    smiles_codes_train = m_c.Data["smiles_codes_train"]
+    m_c.Pipeline.fit(X=smiles_codes_train, y=None)
+    X_train = create_molecular_features(pipeline=m_c.Pipeline, smiles_codes=smiles_codes_train)
+    X_train = process_molecular_features(pipeline=m_c.Pipeline, X=X_train)
+    y_train_pred = m_c.Predict(X_train)
+    y_train = m_c.Data["targets_train"]
+
+    return smiles_codes_train, y_train, y_train_pred, smiles_codes_val, y_train_val, y_train_val_pred
+
 def analyze_classifier(training_configuration_file, show_tsne=False, result_file=None):
     summarize_calculation(training_configuration_file)
     with open(training_configuration_file.as_posix(), "r") as f:
@@ -179,6 +227,57 @@ def analyze_classifier(training_configuration_file, show_tsne=False, result_file
     display.figure_.savefig(model_label+"_roc_training.pdf", dpi=300, format="pdf")
     
     if result_file: fle.close()
+
+
+def get_predictions_regressor(training_configuration_file):
+    with open(training_configuration_file.as_posix(), "r") as f:
+        training_params = json.load(f)
+    
+    m_r = mw.M_XGBoost(prediction_type=mw.Prediction_Type.REGRESSION, pipeline_configuration=None)
+    model_file = (co.MODEL_DIR/training_params["model_storage"]["resulting_model"]).as_posix()
+    m_r.Load(model_file)
+
+    prediction_methodology = training_params["prediction_methodology"]
+    prediction_type=training_params["prediction_type"]
+
+    if prediction_methodology == mw.Prediction_Methodology.MLP:
+        m_r = mw.M_MLP(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.XGBOOST:
+        m_r = mw.M_XGBoost(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RF:
+        m_r = mw.M_RandomForest(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.SVM:
+        m_r = mw.M_SVM(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RIDGE:
+        m_r = mw.M_Ridge(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.BAGGING:
+        m_r = mw.M_Bagging(prediction_type=prediction_type, pipeline_configuration=None)
+    else:
+        raise NotImplementedError
+
+    model_label = prediction_methodology + "_" + create_model_label(training_params)
+
+    model_file = (co.MODEL_DIR/training_params["model_storage"]["resulting_model"]).as_posix()
+    m_r.Load(model_file)
+    l.info("Optimal hyperparameters:, %s", str(m_r.Hyperparameters))
+    smiles_codes_val = m_r.Data["smiles_codes_val"]
+    smiles_codes_train = m_r.Data["smiles_codes_train"]
+    m_r.Pipeline.fit(X=smiles_codes_train, y=None)
+    X_val = create_molecular_features(pipeline=m_r.Pipeline, smiles_codes=smiles_codes_val)
+    X_val = process_molecular_features(pipeline=m_r.Pipeline, X=X_val)
+    y_train_val_pred = m_r.Predict(X_val)
+    y_train_val = m_r.Data["targets_val"]
+
+
+    smiles_codes_val = m_r.Data["smiles_codes_val"]
+    smiles_codes_train = m_r.Data["smiles_codes_train"]
+    m_r.Pipeline.fit(X=smiles_codes_train, y=None)
+    X_train = create_molecular_features(pipeline=m_r.Pipeline, smiles_codes=smiles_codes_train)
+    X_train = process_molecular_features(pipeline=m_r.Pipeline, X=X_train)
+    y_train_pred = m_r.Predict(X_train)
+    y_train = m_r.Data["targets_train"]
+    
+    return smiles_codes_train, y_train, y_train_pred, smiles_codes_val, y_train_val, y_train_val_pred
 
         
 def analyze_regressor(training_configuration_file, result_file=None):
@@ -334,3 +433,98 @@ def get_model_predictions(training_configuration_file, smiles_codes_ext=None):
         y_ext_pred = None
         
     return X_val, y_train_val, y_train_val_pred, X_train, y_train, y_train_pred, X_ext, y_ext_pred
+
+
+def get_model_predictions(training_configuration_file, smiles_codes_ext=None):
+
+    with open(training_configuration_file.as_posix(), "r") as f:
+        training_params = json.load(f)
+    
+    #model = mw.M_XGBoost(prediction_type=mw.Prediction_Type.REGRESSION, pipeline_configuration=None)
+    #model_file = (co.MODEL_DIR/training_params["model_storage"]["resulting_model"]).as_posix()
+    #model.Load(model_file)
+
+    prediction_methodology = training_params["prediction_methodology"]
+    prediction_type=training_params["prediction_type"]
+
+    if prediction_methodology == mw.Prediction_Methodology.MLP:
+        model = mw.M_MLP(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.XGBOOST:
+        model = mw.M_XGBoost(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RF:
+        model = mw.M_RandomForest(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.SVM:
+        model = mw.M_SVM(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RIDGE:
+        model = mw.M_Ridge(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.BAGGING:
+        model = mw.M_Bagging(prediction_type=prediction_type, pipeline_configuration=None)
+    else:
+        raise NotImplementedError
+
+    model_label = prediction_methodology + "_" + create_model_label(training_params)
+
+    model_file = (co.MODEL_DIR/training_params["model_storage"]["resulting_model"]).as_posix()
+    model.Load(model_file)
+    l.info("Optimal hyperparameters:, %s", str(model.Hyperparameters))
+    #smiles_codes_val = model.Data["smiles_codes_val"]
+    smiles_codes_train = model.Data["smiles_codes_train"]
+    model.Pipeline.fit(X=smiles_codes_train, y=None)
+    
+    X_val = create_molecular_features(pipeline=model.Pipeline, smiles_codes=smiles_codes_val)
+    X_val = process_molecular_features(pipeline=model.Pipeline, X=X_val)
+    y_train_val_pred = model.Predict(X_val)
+    y_train_val = model.Data["targets_val"]
+    
+    X_train = create_molecular_features(pipeline=model.Pipeline, smiles_codes=smiles_codes_train)
+    X_train = process_molecular_features(pipeline=model.Pipeline, X=X_train)
+    y_train_pred = model.Predict(X_train)
+    y_train = model.Data["targets_train"]
+    
+    if type(smiles_codes_ext) == pd.Series and len(smiles_codes_ext) > 0:
+        X_ext = create_molecular_features(pipeline=model.Pipeline, smiles_codes=smiles_codes_ext)
+        X_ext = process_molecular_features(pipeline=model.Pipeline, X=X_ext)
+        y_ext_pred = model.Predict(X_ext)
+    else:
+        X_ext = None
+        y_ext_pred = None
+        
+    return X_val, y_train_val, y_train_val_pred, X_train, y_train, y_train_pred, X_ext, y_ext_pred
+
+def get_model_ext_predictions(training_configuration_file, smiles_codes=None):
+
+    with open(training_configuration_file.as_posix(), "r") as f:
+        training_params = json.load(f)
+
+    prediction_methodology = training_params["prediction_methodology"]
+    prediction_type=training_params["prediction_type"]
+
+    if prediction_methodology == mw.Prediction_Methodology.MLP:
+        model = mw.M_MLP(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.XGBOOST:
+        model = mw.M_XGBoost(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RF:
+        model = mw.M_RandomForest(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.SVM:
+        model = mw.M_SVM(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.RIDGE:
+        model = mw.M_Ridge(prediction_type=prediction_type, pipeline_configuration=None)
+    elif prediction_methodology == mw.Prediction_Methodology.BAGGING:
+        model = mw.M_Bagging(prediction_type=prediction_type, pipeline_configuration=None)
+    else:
+        raise NotImplementedError
+
+    model_label = prediction_methodology + "_" + create_model_label(training_params)
+
+    model_file = (co.MODEL_DIR/training_params["model_storage"]["resulting_model"]).as_posix()
+    model.Load(model_file)
+    l.info("Optimal hyperparameters:, %s", str(model.Hyperparameters))
+    smiles_codes_train = model.Data["smiles_codes_train"]
+    model.Pipeline.fit(X=smiles_codes_train, y=None)
+    
+    if type(smiles_codes) == pd.Series and len(smiles_codes) > 0:
+        X_ext = create_molecular_features(pipeline=model.Pipeline, smiles_codes=smiles_codes)
+        X_ext = process_molecular_features(pipeline=model.Pipeline, X=X_ext)
+        y_ext_pred = model.Predict(X_ext)
+        
+    return y_ext_pred
