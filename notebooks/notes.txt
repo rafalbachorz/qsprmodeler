@@ -1,8 +1,0 @@
-Molecules - anchores:
-* Digoxin
-* Cholesterol derivatives
-* Ursolic acid
-
-* New receptors
-** PXR
-** AR

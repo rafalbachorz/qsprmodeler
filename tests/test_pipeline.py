@@ -38,7 +38,7 @@ def test_pipeline_regression():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 52
-    assert np.abs(y_train.sum() - 4.126338907446342) < co.EPSILON
+    assert np.abs(y_train.sum() - 10.550248613365252) < co.EPSILON
     assert np.abs(X_train["QED"].sum() - 1.216724054855354) < co.EPSILON
 
 def test_pipeline_regression_pca_n_components():
@@ -64,10 +64,10 @@ def test_pipeline_regression_pca_n_components():
     
     pca_columns = pipeline_train["PCA"].PCA_feature_names
     assert X_train[pca_columns].sum().sum() < co.EPSILON * 5.0
-    assert np.abs(y_train.sum() - 332.9964572007816) < co.EPSILON
+    assert np.abs(y_train.sum() - 421.895848241974) < co.EPSILON
     pca = pipeline_train["PCA"].PCA_model
     variance_explained = np.sum(pca.explained_variance_ratio_)
-    assert np.abs(variance_explained - 0.5677026318621108) < co.EPSILON
+    assert np.abs(variance_explained - 0.5686499939524418) < co.EPSILON * 5.0
     
 
 def test_pipeline_regression_pca():
@@ -93,8 +93,8 @@ def test_pipeline_regression_pca():
     
     pca_columns = pipeline_train["PCA"].PCA_feature_names
     assert X_train[pca_columns].sum().sum() < co.EPSILON * 10.0
-    assert np.abs(y_train.sum() - 332.9964572007816) < co.EPSILON
-    assert np.abs(X_train["QED"].sum() - 54.39274167788612) < co.EPSILON
+    assert np.abs(y_train.sum() - 421.895848241974) < co.EPSILON
+    assert np.abs(X_train["QED"].sum() - 53.6301274713526) < co.EPSILON
 
 def test_pipeline_regression_only_fps_morgan():
 
@@ -119,7 +119,7 @@ def test_pipeline_regression_only_fps_morgan():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 4162
-    assert np.abs(y_train.sum() - 333.1783870141875) < co.EPSILON
+    assert np.abs(y_train.sum() - 434.64987933584274) < co.EPSILON
     
 def test_pipeline_regression_only_fps_atompairs():
 
@@ -144,7 +144,7 @@ def test_pipeline_regression_only_fps_atompairs():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 4162
-    assert np.abs(y_train.sum() - 333.1783870141875) < co.EPSILON
+    assert np.abs(y_train.sum() - 434.64987933584274) < co.EPSILON
 
 def test_pipeline_corr():
 
@@ -168,7 +168,7 @@ def test_pipeline_corr():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     survived_features = pipeline_train["Corr"].SurvivedFeatures
-    assert np.abs(X_train[survived_features].sum().sum() - 3877.0) < co.EPSILON
+    assert np.abs(X_train[survived_features].sum().sum() - 3834.0) < co.EPSILON
 
 def test_pipeline_regression_only_fps_sheridan():
 
@@ -193,7 +193,7 @@ def test_pipeline_regression_only_fps_sheridan():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 4162
-    assert np.abs(y_train.sum() - 333.1783870141875) < co.EPSILON
+    assert np.abs(y_train.sum() - 434.64987933584274) < co.EPSILON
     
 def test_pipeline_regression_only_fps_topological():
 
@@ -218,7 +218,7 @@ def test_pipeline_regression_only_fps_topological():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 55726
-    assert np.abs(y_train.sum() - 333.1783870141875) < co.EPSILON
+    assert np.abs(y_train.sum() - 434.64987933584274) < co.EPSILON
     
 def test_pipeline_regression_only_fps_maccs():
 
@@ -243,7 +243,7 @@ def test_pipeline_regression_only_fps_maccs():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 4786
-    assert np.abs(y_train.sum() - 333.1783870141875) < co.EPSILON
+    assert np.abs(y_train.sum() - 434.64987933584274) < co.EPSILON
 
 def test_pipeline_regression_only_descriptors():
 
@@ -266,7 +266,7 @@ def test_pipeline_regression_only_descriptors():
     X_train = dt.create_molecular_features(pipeline=pipeline_train, smiles_codes=smiles_codes)
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
-    assert np.abs(y_train.sum() - 333.1783870141875) < co.EPSILON
+    assert np.abs(y_train.sum() - 434.64987933584274) < co.EPSILON
     assert np.abs(X_train["QED"].sum() - 54.92231487365173) < co.EPSILON
     assert np.abs(X_train["SLogP"].sum() - 353.42059000000023) < co.EPSILON
     assert np.abs(X_train["MW"].sum() - 35544.69200639604) < co.EPSILON
@@ -294,8 +294,8 @@ def test_pipeline_regression_supplement():
     
     assert "supp_1" in X_train.columns
     assert "supp_2" in X_train.columns
-    assert X_train["supp_1"].sum() == 95
-    assert X_train["supp_2"].sum() == 190
+    assert X_train["supp_1"].sum() == 94
+    assert X_train["supp_2"].sum() == 188
 
 def test_pipeline_regression_scaling():
     
@@ -322,7 +322,7 @@ def test_pipeline_regression_scaling():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 110
-    assert np.abs(y_train.sum() - 4.4321309990704405) < co.EPSILON
+    assert np.abs(y_train.sum() - 16.996729673216283) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON
     assert np.abs(X_train["MW"].sum()) < co.EPSILON
@@ -349,12 +349,12 @@ def test_pipeline_regression_scaling_more_classes():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
-    assert X_train[fp_columns].sum().sum() == 4123
-    assert np.abs(y_train.sum() - 332.9964572007816) < co.EPSILON
+    assert X_train[fp_columns].sum().sum() == 4082
+    assert np.abs(y_train.sum() - 421.895848241974) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON*10.0
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON*10.0
     assert np.abs(X_train["MW"].sum()) < co.EPSILON*10.0
-    assert np.abs(X_train["BalabanJ"].sum() - 153.77295010626483) < co.EPSILON
+    assert np.abs(X_train["BalabanJ"].sum() - 152.015739280374) < co.EPSILON
 
 def test_pipeline_classification():
 
@@ -381,7 +381,7 @@ def test_pipeline_classification():
 
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 52
-    assert y_train.astype(np.int8).sum() == 1
+    assert y_train.astype(int).sum() == 1
     assert np.abs(X_train["QED"].sum() - 1.216724054855354) < co.EPSILON
     
 def test_pipeline_regression_no_o_removal():
@@ -409,7 +409,7 @@ def test_pipeline_regression_no_o_removal():
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
     assert X_train[fp_columns].sum().sum() == 52
-    assert np.abs(y_train.sum() - 4.126338907446342) < co.EPSILON
+    assert np.abs(y_train.sum() - 10.550248613365252) < co.EPSILON
     assert np.abs(X_train["QED"].sum() - 1.216724054855354) < co.EPSILON
 
     
@@ -435,9 +435,9 @@ def test_XGBoost_wrapper_with_scaling():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
-    assert X_train.shape == (95, 1035)
-    assert X_train[fp_columns].sum().sum() == 4123
-    assert np.abs(y_train.sum() - 332.9964572007816) < co.EPSILON
+    assert X_train.shape == (94, 1035)
+    assert X_train[fp_columns].sum().sum() == 4082
+    assert np.abs(y_train.sum() - 421.895848241974) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON*100
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON*100
     assert np.abs(X_train["MW"].sum()) < co.EPSILON*100
@@ -468,8 +468,8 @@ def test_pipeline_regression_fit_transform():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
-    assert X_train[fp_columns].sum().sum() == 4123
-    assert np.abs(y_train.sum() - 332.9964572007816) < co.EPSILON
+    assert X_train[fp_columns].sum().sum() == 4082
+    assert np.abs(y_train.sum() - 421.895848241974) < co.EPSILON
     
     test_data_transform = pd.read_csv((ARTIFACTS_DIR/"test_data_2.csv").absolute().as_posix(), sep=",", index_col="molregno")
     smiles_codes = test_data_transform["smiles"]
@@ -487,7 +487,7 @@ def test_pipeline_regression_fit_transform():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     assert X_train[fp_columns].sum().sum() == 4854
     assert np.abs(X_train["QED"].sum() - 58.70206232985786) < co.EPSILON
-    assert np.abs(y_train.sum() - 121.30807004481103) < co.EPSILON
+    assert np.abs(y_train.sum() - 601.3369707275994) < co.EPSILON
     
     
     

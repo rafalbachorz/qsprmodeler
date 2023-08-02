@@ -1,28 +1,21 @@
 name: qsprmodeler
 channels:
   - conda-forge
-  - anaconda
-  - defaults
 dependencies:
-  - configargparse
   - h5py
   - importlib_resources
-  - openbabel
   - pip
-  - python=3.11 
+  - python=3.11
   - jupyter
   - pandas=1.2.1
-  - rdkit
   - scikit-learn
   - matplotlib
-  - psycopg2 
   - openpyxl
+  - pytest
   - pip:
     - tensorflow
-    - tqdm
+    - rdkit
     - mordred
     - xgboost
     - dill
     - hyperopt
-    - seaborn
-    - molplotly

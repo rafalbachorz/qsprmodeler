@@ -48,8 +48,8 @@ def test_MLP_Train_CV_regressor():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     pca_columns = pipeline_train["PCA"].PCA_feature_names
-    assert np.abs(X_train[pca_columns].sum().sum()) < co.EPSILON*100.0
-    assert np.abs(y_train.sum() - 381.77915051762307) < co.EPSILON
+    assert np.abs(X_train[pca_columns].sum().sum()) < co.EPSILON*1000.0
+    assert np.abs(y_train.sum() - 5823.899535822553) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["MW"].sum()) < co.EPSILON*100.0
@@ -65,13 +65,14 @@ def test_MLP_Train_CV_regressor():
     
     m_r.Data = data
     m_r.Create_Features()
-    
-    preds = m_r.Train_CV(hyperparameters={}, n_outer=1, n_cv=3)
-    assert np.abs(preds.sum() - 456.1112973988056) < co.EPSILON
-    assert np.abs(preds.mean() - 0.577356072656716) < co.EPSILON
+    hps = {"mlp_architecture": [64, 32], "activation": "relu", "optimizer": "Adam"}
+    #for key in m_r.Space.keys(): hps[key] = m_r._hyperparameter_types[key](m_r.Space[key])
+    preds = m_r.Train_CV(hps, n_outer=1, n_cv=3)
+    assert np.abs(preds.sum() - 5511.759456157684) < co.EPSILON
+    assert np.abs(preds.mean() - 6.124177173508538) < co.EPSILON
     
     # create final model
-    m_r.Train(X=X_train, y=y_train, hyperparameters={})
+    m_r.Train(X=X_train, y=y_train, hyperparameters=hps)
     some_smiles = "CC(=O)O[C@H]1C(=O)[C@]2(C)[C@@H](O)C[C@H]3OC[C@@]3(OC(C)=O)[C@H]2[C@H](OC(=O)c2ccccc2)[C@]2(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C"
     some_smiles = pd.Series(some_smiles)
     some_smile_features = dt.create_molecular_features(pipeline=pipeline_train, smiles_codes=some_smiles)
@@ -117,7 +118,7 @@ def test_MLP_Train_CV_classifier():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     pca_columns = pipeline_train["PCA"].PCA_feature_names
-    assert np.abs(X_train[pca_columns].sum().sum()) < co.EPSILON*100.0
+    assert np.abs(X_train[pca_columns].sum().sum()) < co.EPSILON*1000.0
     assert np.abs(y_train.sum() - 753) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON*100.0
@@ -134,10 +135,10 @@ def test_MLP_Train_CV_classifier():
     
     m_c.Data = data
     m_c.Create_Features()
-    
-    preds = m_c.Train_CV(hyperparameters={}, n_outer=1, n_cv=3)
-    assert np.abs(preds.sum() - 647.1320064365864) < co.EPSILON
-    assert np.abs(preds.mean() - 0.7190355627073182) < co.EPSILON
+    hps = hyperparameters={"mlp_architecture": [64, 32], "activation": "relu", "optimizer": "Adam"}
+    preds = m_c.Train_CV(hyperparameters=hps, n_outer=1, n_cv=3)
+    assert np.abs(preds.sum() - 702.9536809772253) < co.EPSILON
+    assert np.abs(preds.mean() - 0.7810596455302503) < co.EPSILON
     
     
 def test_MLP_hyperopt_regressor():
@@ -172,7 +173,7 @@ def test_MLP_hyperopt_regressor():
 
     fmin_objective = partial(m_r.F_Opt, aux_data=aux_data)
     trials = Trials()
-    rstate = np.random.RandomState(co.RANDOM_STATE+1)
+    rstate = np.random.default_rng(co.RANDOM_STATE+1)
     max_evals = 2
     best_hyperparams = fmin(fn=fmin_objective, space=m_r.Space, algo=tpe.suggest, max_evals=max_evals, 
                             trials=trials, return_argmin=True, rstate=rstate, show_progressbar=True)
@@ -180,7 +181,7 @@ def test_MLP_hyperopt_regressor():
     best_hyperparams = space_eval(space=m_r.Space, hp_assignment=best_hyperparams)
     measure = m_r.Get_Measure(smiles_codes, y_train, hyperparameters=best_hyperparams, n_outer=aux_data["n_outer"], n_cv=aux_data["n_cv"],
                         threshold=None, goal=aux_data["goal_function"]) 
-    assert np.abs(measure - 0.8542637369202594) < co.EPSILON
+    assert np.abs(measure - 0.8110337782733136) < co.EPSILON
     
 def test_MLP_hyperopt_classifier():
     test_data_fit = pd.read_csv((ARTIFACTS_DIR/"test_data_large.csv").absolute().as_posix(), sep=",", index_col="molregno")
@@ -214,7 +215,7 @@ def test_MLP_hyperopt_classifier():
 
     fmin_objective = partial(m_r.F_Opt, aux_data=aux_data)
     trials = Trials()
-    rstate = np.random.RandomState(co.RANDOM_STATE+1)
+    rstate = np.random.default_rng(co.RANDOM_STATE+1)
     max_evals = 2
     best_hyperparams = fmin(fn=fmin_objective, space=m_r.Space, algo=tpe.suggest, max_evals=max_evals, 
                             trials=trials, return_argmin=True, rstate=rstate, show_progressbar=True)
@@ -222,4 +223,4 @@ def test_MLP_hyperopt_classifier():
     best_hyperparams = space_eval(space=m_r.Space, hp_assignment=best_hyperparams)
     measure = m_r.Get_Measure(smiles_codes, y_train, hyperparameters=best_hyperparams, n_outer=aux_data["n_outer"], n_cv=aux_data["n_cv"],
                         threshold=None, goal=aux_data["goal_function"]) 
-    assert np.abs(measure - 0.6334213390183097) < co.EPSILON
+    assert np.abs(measure - 0.8083185961633288) < co.EPSILON

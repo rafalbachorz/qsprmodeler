@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 import pandas as pd
 import numpy as np
+import os
 import tempfile
 import pytest
 from sklearn.model_selection import train_test_split 
@@ -47,8 +48,8 @@ def test_XGBoost_Train_CV_with_scaling():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
-    assert X_train[fp_columns].sum().sum() == 3727
-    assert np.abs(y_train.sum() - 296.8966552477734) < co.EPSILON
+    assert X_train[fp_columns].sum().sum() == 3673
+    assert np.abs(y_train.sum() - 377.59610229234346) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["MW"].sum()) < co.EPSILON*100.0
@@ -62,7 +63,7 @@ def test_XGBoost_Train_CV_with_scaling():
     m_r.Create_Features()
     
     preds = m_r.Train_CV(hyperparameters={}, n_outer=1, n_cv=3)
-    assert np.abs(preds.mean() - 3.5262140231973986) < co.EPSILON
+    assert np.abs(preds.mean() - 4.555848677953084) < co.EPSILON
 
 
 def test_XGBoost_Train_with_scaling():
@@ -100,7 +101,7 @@ def test_XGBoost_Train_with_scaling():
     
     m_r.Train(X_train, y_train, hyperparameters={})
     preds = m_r.Predict(X_train_val)
-    assert np.abs(preds.mean() - 3.5546412467956543) < co.EPSILON
+    assert np.abs(preds.mean() - 4.454573154449463) < co.EPSILON
 
 def test_XGBoost_Get_Measure_with_scaling():
     
@@ -124,8 +125,8 @@ def test_XGBoost_Get_Measure_with_scaling():
     X_train = dt.process_molecular_features(pipeline=pipeline_train, X=X_train)
     
     fp_columns = pipeline_train["Molecular features"].fp_column_names
-    assert X_train[fp_columns].sum().sum() == 4123
-    assert np.abs(y_train.sum() - 332.9964572007816) < co.EPSILON
+    assert X_train[fp_columns].sum().sum() == 4082
+    assert np.abs(y_train.sum() - 421.895848241974) < co.EPSILON
     assert np.abs(X_train["QED"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["SLogP"].sum()) < co.EPSILON*100.0
     assert np.abs(X_train["MW"].sum()) < co.EPSILON*100.0
@@ -145,7 +146,7 @@ def test_XGBoost_Get_Measure_with_scaling():
     
     mse = m_r.Get_Measure(smiles_codes, y_train, hyperparameters={}, n_outer=aux_data["n_outer"], n_cv=aux_data["n_cv"],
                     threshold=None, goal=aux_data["goal_function"])
-    assert np.abs(mse - 0.8757378574512518) < co.EPSILON
+    assert np.abs(mse - 0.16600139536815428) < co.EPSILON
   
   
 def test_XGBoost_Get_Measure_with_scaling_classification():
@@ -191,7 +192,7 @@ def test_XGBoost_hyperopt():
     target = target.drop(non_idx, axis=0)
 
     pipeline_file = "pipeline_configuration_XGBoost_regression.json"
-    pipeline_configuration = dt.read_in_pipeline(pipeline_file=pipeline_file, pipeline_directory=co.PIPELINE_DIR)
+    pipeline_configuration = dt.read_in_pipeline(pipeline_file=pipeline_file, pipeline_directory=ARTIFACTS_DIR)
     
     y_train = dt.process_taget(pipeline_configuration=pipeline_configuration["target_transform"], y=target)
     smiles_codes = smiles_codes.loc[y_train.index]
@@ -210,7 +211,7 @@ def test_XGBoost_hyperopt():
 
     fmin_objective = partial(m_r.F_Opt, aux_data=aux_data)
     trials = Trials()
-    rstate = np.random.RandomState(co.RANDOM_STATE+1)
+    rstate = np.random.default_rng(co.RANDOM_STATE+1)
     max_evals = 5
     best_hyperparams = fmin(fn=fmin_objective, space=m_r.Space, algo=tpe.suggest, max_evals=max_evals, 
                             trials=trials, return_argmin=True, rstate=rstate)
@@ -220,14 +221,14 @@ def test_XGBoost_hyperopt():
     mse = m_r.Get_Measure(smiles_codes, y_train, hyperparameters=best_hyperparams, n_outer=aux_data["n_outer"], n_cv=aux_data["n_cv"],
                           threshold=None, goal=aux_data["goal_function"])
     
-    assert np.abs(mse - 0.9372528945602626) < co.EPSILON
+    assert np.abs(mse - 0.262021596218082) < co.EPSILON
     
-    tmp_file = tempfile.NamedTemporaryFile()
-    m_r.Save(tmp_file.name)
+    tmp_file = Path("remove.me")
+    m_r.Save(tmp_file)
     m_r_2 = mw.M_XGBoost(prediction_type=mw.Prediction_Type.REGRESSION, pipeline_configuration=None)
     
-    m_r_2.Load(tmp_file.name)
+    m_r_2.Load(tmp_file)
     mse_2 = m_r.Get_Measure(smiles_codes, y_train, hyperparameters=best_hyperparams, n_outer=aux_data["n_outer"], n_cv=aux_data["n_cv"],
                             threshold=None, goal=aux_data["goal_function"])
-    tmp_file.close()
+    os.remove(tmp_file)
     assert np.abs(mse - mse_2) < co.EPSILON

@@ -15,10 +15,10 @@
         "experiment": null, 
         "comment": null, 
         "max_evals": 100,
-        "pipeline_file": "ar/pipeline_configuration_xgboost_regression_Morgan_1024_pca_50_QED.json"
+        "pipeline_file": "C:/Users/rbachorz/Projects/qsarmodeler/qsarmodeler/pipelines/pipeline_configuration_xgboost_regression_Morgan_1024_pca_50_QED.json"
     },
     "data_preparation": {
-        "data_file": "ar_homo_sapiens_chembl_3.3_more_ChEMBL_columnsIC50EC50_combined_expert_regressor_case_removed_badly_predicted.csv",
+        "data_file": "C:/Users/rbachorz/Projects/qsarmodeler/qsarmodeler/data/processed/ar_homo_sapiens_chembl_3.3_more_ChEMBL_columnsIC50EC50_combined_expert_regressor_case_removed_badly_predicted.csv",
         "molecule_column": "coms_canonical_smiles",
         "experimental_data_prefix": "act_median_expert",
         "target_column": "experimental_value",
@@ -27,6 +27,6 @@
         "strategy": "median"
     },
     "model_storage": {
-        "resulting_model": "ar_xgboost_regressor_pca50_expert_special_data_removed_badly_predicted.model"
+        "resulting_model": "C:/Users/rbachorz/Projects/qsarmodeler/qsarmodeler/models/ar_xgboost_regressor_pca50_expert_special_data_removed_badly_predicted.model"
     }
 }
