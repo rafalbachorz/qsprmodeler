@@ -1,0 +1,32 @@
+{
+    "prediction_methodology": "M_RandomForest",
+    "prediction_type": "regression",
+    "GPU_support": false,
+    "training_aux_data": 
+    {
+        "run_name": "test", 
+        "n_outer": 1, 
+        "n_cv": 5, 
+        "development": false, 
+        "goal_function": "mse", 
+        "goal_function_multiplier": 1.0, 
+        "threshold": null,
+        "track_model": false, 
+        "experiment": null, 
+        "comment": null, 
+        "max_evals": 100,
+        "pipeline_file": "../pipelines/pipeline_configuration_regression_PXR_Morgan_1024_pca_50_QED.json"
+    },
+    "data_preparation": {
+        "data_file": "../data/PXR_training_data.csv",
+        "molecule_column": "SMILES",
+        "experimental_data_prefix": "act_median_expert",
+        "target_column": "target_",
+        "max_level_activity": 1,
+        "std_threshold": 100,
+        "strategy": "median"
+    },
+    "model_storage": {
+        "resulting_model": "../models/PXR_rf_regressor_pca50_expert.model"
+    }
+}
